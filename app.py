@@ -36,7 +36,7 @@ def about():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
-        return f'{request.form["username"]} + {request.form["password"]}'
+        return f'login: {request.form["username"]} <br> password: {request.form["password"]}'
     else:
         return render_template('login.html')
 
